@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <title>Document</title>
+</head>
+<body>
+    <h2 th:text="${campus.location}">Location</h2>
+    <h2>Here is a list of books</h2>
+    <ul class="book">
+        <li class="book" th:each="book:${campus.books}">
+            <a th:href="@{'/books/' + ${book.id}}"
+                  th:text="${book.title}">title</a>
+        </li>
+    </ul>
+</body>
+</html>

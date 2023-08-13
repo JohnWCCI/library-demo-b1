@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 th:text="${book.title}">title</h1>
+    <h2 th:each="author: ${book.authors}"
+    th:text="${author.firstName} +' ' + ${author.lastName}">place holder</h2>
+    <p th:text="${book.description}">
+        another place holder
+    </p>
+</body>
+</html>
